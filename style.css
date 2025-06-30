@@ -1,0 +1,105 @@
+:root {
+  --main: #0d3b66;
+  --accent: #00aaff;
+  --light: #f2f4f8;
+  --text: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--light);
+  color: var(--text);
+  padding: 20px;
+}
+
+.wrapper {
+  max-width: 850px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--main);
+}
+
+header p {
+  color: #666;
+  margin: 5px 0 15px;
+}
+
+.download-btn {
+  background: var(--accent);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #008ecc;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  color: var(--main);
+  border-left: 4px solid var(--accent);
+  padding-left: 10px;
+}
+
+.section p, .section ul {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill span {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.bar {
+  height: 12px;
+  background: #ddd;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bar::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  background: var(--accent);
+  width: var(--level);
+  border-radius: 10px;
+  transition: width 2s ease;
+}
